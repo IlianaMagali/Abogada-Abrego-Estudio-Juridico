@@ -1,1 +1,713 @@
-index.html [generated with web_code_canvas tool]
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dra. Iliana Ábrego | Abogada Patrocinante - Córdoba</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-burgundy: #6b1d2f;
+            --secondary-burgundy: #802338;
+            --accent-light: #f8f1e9;
+            --dark-slate: #2b2d42;
+            --light-gray: #f4f5f7;
+            --border-color: #e2e8f0;
+            --whatsapp-green: #25d366;
+            --whatsapp-hover: #1da851;
+            --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--dark-slate);
+            background-color: #ffffff;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-burgundy);
+        }
+
+        /* Top Bar */
+        .top-bar {
+            background-color: var(--dark-slate);
+            color: #ffffff;
+            font-size: 0.85rem;
+            padding: 8px 0;
+        }
+
+        .top-bar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .top-info {
+            display: flex;
+            gap: 20px;
+        }
+
+        .top-info span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Navigation / Header */
+        header {
+            background-color: #ffffff;
+            border-bottom: 2px solid var(--accent-light);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .brand-logo {
+            text-decoration: none;
+        }
+
+        .brand-logo h1 {
+            font-size: 1.5rem;
+            letter-spacing: -0.5px;
+            margin: 0;
+        }
+
+        .brand-logo span {
+            font-size: 0.8rem;
+            font-family: 'Montserrat', sans-serif;
+            color: #666;
+            display: block;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-btn {
+            background-color: var(--primary-burgundy);
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            background-color: var(--secondary-burgundy);
+        }
+
+        /* Container */
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(107,29,47,0.05) 0%, rgba(248,241,233,0.6) 100%);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background-color: var(--accent-light);
+            color: var(--primary-burgundy);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            border: 1px solid rgba(107, 29, 47, 0.2);
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 750px;
+            margin: 0 auto 30px auto;
+            color: #4a5568;
+        }
+
+        .hero-actions {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn-whatsapp {
+            background-color: var(--whatsapp-green);
+            color: white;
+            padding: 14px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-whatsapp:hover {
+            background-color: var(--whatsapp-hover);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--primary-burgundy);
+            color: var(--primary-burgundy);
+            padding: 14px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-burgundy);
+            color: white;
+        }
+
+        /* Profile & Details */
+        .profile-section {
+            padding: 50px 0;
+            background-color: #ffffff;
+        }
+
+        .profile-card {
+            background-color: var(--light-gray);
+            border-radius: 12px;
+            padding: 30px;
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .profile-info h3 {
+            font-size: 1.6rem;
+            margin-bottom: 5px;
+        }
+
+        .profile-info .mat {
+            font-weight: 700;
+            color: var(--primary-burgundy);
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        /* Practices Section */
+        .practices {
+            padding: 70px 0;
+            background-color: #fafafa;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h3 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .section-header p {
+            color: #666;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .practice-card {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 30px 25px;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .practice-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary-burgundy);
+        }
+
+        .card-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--accent-light);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            color: var(--primary-burgundy);
+            margin-bottom: 20px;
+        }
+
+        .practice-card h4 {
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+        }
+
+        .practice-card p {
+            font-size: 0.95rem;
+            color: #555;
+            flex-grow: 1;
+        }
+
+        /* QR Section */
+        .qr-section {
+            padding: 60px 0;
+            background-color: var(--primary-burgundy);
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .qr-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .qr-box {
+            background-color: #ffffff;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            max-width: 250px;
+        }
+
+        .qr-box img {
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+            display: block;
+        }
+
+        .qr-section h3 {
+            color: #ffffff;
+            font-size: 1.8rem;
+        }
+
+        .qr-section p {
+            max-width: 600px;
+            color: var(--accent-light);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 70px 0;
+            background-color: #ffffff;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .info-item {
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+        }
+
+        .info-item i {
+            font-size: 1.2rem;
+            color: var(--primary-burgundy);
+            background-color: var(--accent-light);
+            padding: 12px;
+            border-radius: 50%;
+        }
+
+        .contact-form {
+            background-color: var(--light-gray);
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            font-family: inherit;
+            font-size: 0.95rem;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            height: 120px;
+        }
+
+        .btn-submit {
+            width: 100%;
+            background-color: var(--primary-burgundy);
+            color: white;
+            border: none;
+            padding: 14px;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-submit:hover {
+            background-color: var(--secondary-burgundy);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-slate);
+            color: #a0aec0;
+            padding: 40px 0 20px 0;
+            font-size: 0.9rem;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #4a5568;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-brand h4 {
+            color: #ffffff;
+            font-size: 1.2rem;
+        }
+
+        .copyright {
+            text-align: center;
+            font-size: 0.8rem;
+        }
+
+        /* Floating WhatsApp Button */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background-color: var(--whatsapp-green);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            z-index: 9999;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        .floating-whatsapp:hover {
+            transform: scale(1.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+
+            .profile-card {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .top-bar .container {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-info">
+                <span><i class="fa-solid fa-location-dot"></i> Córdoba, Argentina</span>
+                <span><i class="fa-solid fa-user-check"></i> Consultas Presenciales y Virtuales</span>
+            </div>
+            <div>
+                <span>M.P. 1-45402</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container navbar">
+            <a href="#" class="brand-logo">
+                <h1>ABOGADOS ASESORANDO</h1>
+                <span>Dra. Iliana Ábrego</span>
+            </a>
+            <a href="https://wa.me/5493516088293?text=Hola%20Dra.%20Iliana,%20deseo%20realizar%20una%20consulta%20legal." class="nav-btn" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i> Consultar
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <span class="hero-badge">Estudio Jurídico Integral</span>
+            <h2>Asesoramiento Legal Eficiente y Compromiso Profesional</h2>
+            <p>Patrocinio letrado y representación integral en materia laboral, civil, penal contravencional y derecho de familia en la provincia de Córdoba.</p>
+            <div class="hero-actions">
+                <a href="https://wa.me/5493516088293?text=Hola%20Dra.%20Iliana,%20quisiera%20agendar%20una%20consulta." class="btn-whatsapp" target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i> Consulta por WhatsApp
+                </a>
+                <a href="#contacto" class="btn-outline">Enviar Formulario</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profile Section -->
+    <section class="profile-section">
+        <div class="container">
+            <div class="profile-card">
+                <div class="profile-info">
+                    <h3>Dra. Iliana Ábrego</h3>
+                    <span class="mat">Abogada Patrocinante | Matrícula Profesional 1-45402</span>
+                    <p>Atención directa, personalizada y con enfoque práctico para resolver sus conflictos legales. Brindamos soporte profesional para audiencias, reclamos, negociaciones y litigios en el fuero provincial de Córdoba.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services / Practices -->
+    <section class="practices" id="servicios">
+        <div class="container">
+            <div class="section-header">
+                <h3>Áreas de Práctica</h3>
+                <p>Especialización e intervención en los principales fueros del Derecho</p>
+            </div>
+            <div class="cards-grid">
+                
+                <!-- Card 1 -->
+                <div class="practice-card">
+                    <div class="card-icon"><i class="fa-solid fa-gavel"></i></div>
+                    <h4>Penal y Contravencional</h4>
+                    <p>Defensa y asesoramiento en el Código de Convivencia Ciudadana de Córdoba (Ley 10.326), contravenciones, representaciones y garantías en el proceso penal provincial.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="practice-card">
+                    <div class="card-icon"><i class="fa-solid fa-users-between-lines"></i></div>
+                    <h4>Familia y Sucesiones</h4>
+                    <p>Tramitación integral de Divorcios (unilaterales y bilaterales), Convenios Reguladores, Alimentos, Régimen de Comunicación y Declaratoria de Herederos.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="practice-card">
+                    <div class="card-icon"><i class="fa-solid fa-briefcase"></i></div>
+                    <h4>Derecho Laboral</h4>
+                    <p>Representación de trabajadores en reclamos por despidos, trabajo no registrado, diferencias salariales, liquidaciones e indemnizaciones.</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="practice-card">
+                    <div class="card-icon"><i class="fa-solid fa-car-burst"></i></div>
+                    <h4>Accidentes de Trabajo y Tránsito</h4>
+                    <p>Reclamos ante ART, Comisiones Médicas, incapacidades laborales y reclamos de indemnización contra compañías de seguro por siniestros viales.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- QR Section -->
+    <section class="qr-section">
+        <div class="container qr-container">
+            <h3>Abogados Asesorando en Redes</h3>
+            <p>Escaneá nuestro código QR o hacé clic para seguir nuestras publicaciones informativas, novedades jurídicas e iniciativas del estudio.</p>
+            <div class="qr-box">
+                <a href="https://instagram.com" target="_blank">
+                    <img src="abogadosasesorando_qr (1).jpg" alt="QR Abogados Asesorando" onerror="this.src='https://via.placeholder.com/200x200?text=QR+Abogados+Asesorando'">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contacto">
+        <div class="container">
+            <div class="section-header">
+                <h3>Contacto Directo</h3>
+                <p>Agendá tu consulta presencial o virtual en Córdoba</p>
+            </div>
+            <div class="contact-grid">
+                
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <div>
+                            <h4>WhatsApp / Teléfono</h4>
+                            <p>+54 9 351 608 8293</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fa-regular fa-envelope"></i>
+                        <div>
+                            <h4>Correo Electrónico</h4>
+                            <p>ilianaabrego@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <h4>Modalidad de Atención</h4>
+                            <p>Córdoba, Argentina. Atención presencial en estudio y consultas virtuales para toda la provincia.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form id="legalForm">
+                        <div class="form-group">
+                            <label for="nombre">Nombre Completo</label>
+                            <input type="text" id="nombre" required placeholder="Ej: María González">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="rubro">Motivo de Consulta</label>
+                            <select id="rubro" required>
+                                <option value="">Seleccione una especialidad</option>
+                                <option value="Penal / Contravencional">Penal y Contravencional</option>
+                                <option value="Divorcio / Sucesion">Divorcio / Declaratoria de Herederos</option>
+                                <option value="Derecho Laboral">Derecho Laboral / Despidos</option>
+                                <option value="Accidente ART / Transito">Accidente de Trabajo / Tránsito</option>
+                                <option value="Otro asunto">Otro motivo</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mensaje">Detalle Breve de la Consulta</label>
+                            <textarea id="mensaje" required placeholder="Escriba brevemente sobre su situación..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-submit">Enviar Consulta por WhatsApp</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h4>ABOGADOS ASESORANDO</h4>
+                    <p>Dra. Iliana Ábrego - Abogada Patrocinante (M.P. 1-45402)</p>
+                </div>
+                <div>
+                    <p><i class="fa-solid fa-shield-halved"></i> Confidencialidad y Ética Profesional</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 Abogados Asesorando. Todos los derechos reservados. Córdoba, Argentina.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/5493516088293?text=Hola%20Dra.%20Iliana,%20deseo%20realizar%20una%20consulta%20legal." class="floating-whatsapp" target="_blank" title="Consultar por WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- JavaScript para enviar el formulario directo a WhatsApp -->
+    <script>
+        document.getElementById('legalForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            var nombre = document.getElementById('nombre').value;
+            var rubro = document.getElementById('rubro').value;
+            var mensaje = document.getElementById('mensaje').value;
+            
+            var textoWS = "Hola Dra. Iliana Ábrego, mi nombre es " + encodeURIComponent(nombre) + 
+                          ".%0AMotivo de consulta: " + encodeURIComponent(rubro) + 
+                          ".%0ADetalle: " + encodeURIComponent(mensaje);
+            
+            var url = "https://wa.me/5493516088293?text=" + textoWS;
+            window.open(url, '_blank');
+        });
+    </script>
+</body>
+</html>
